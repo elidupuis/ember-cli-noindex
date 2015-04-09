@@ -1,8 +1,26 @@
-# Ember-cli-noindex
+# ember-cli-noindex
 
-This README outlines the details of collaborating on this Ember addon.
+Simply adds `<meta name="robots" content="noindex, nofollow">` to the `<head>` of your *index.html*.
+
+You can opt-out of this per environment using the `enabled` configuration option in your *environment.js* file:
+
+```js
+if (environment === 'production') {
+  ENV.noindex = {
+    enabled: false
+  }
+}
+```
 
 ## Installation
+
+```bash
+ember install ember-cli-noindex
+```
+
+That's it!
+
+## Collaboration
 
 * `git clone` this repository
 * `npm install`

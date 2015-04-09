@@ -40,7 +40,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.noindex = {
+      enabled: false
+    }
   }
 
   return ENV;
