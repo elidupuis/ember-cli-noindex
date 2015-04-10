@@ -11,9 +11,9 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository" : {
-      "type" : "git",
-      "url" : "https://github.com/elidupuis/ember-cli-noindex.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elidupuis/ember-cli-noindex.git"
   },
   "bugs": "https://github.com/elidupuis/ember-cli-noindex/issues",
   "engines": {
@@ -44,7 +44,8 @@
     "nofollow"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-cli-babel": "^5.0.0",
+    "lodash-node": "^3.6.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

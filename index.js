@@ -1,23 +1,26 @@
 /* jshint node: true */
 'use strict';
 
+var merge = require('lodash-node/compat/object/merge');
+
 module.exports = {
   name: 'ember-cli-noindex',
 
   /**
-   * Add `<meta name="robots" content="noindex, nofollow">` to <head>
-   * unless the addon has been disabled in the current environment.
+   * Add `<meta name="robots" content="noindex, nofollow">` to <head>.
+   * We default to enabled in all environments except production.
    */
   contentFor: function(type, config) {
-    var enabled = true;
+    var defaultConfig = {
+      enabled: config.environment !== 'production'
+    };
 
-    // allow users to opt-out
-    if (config.noindex && config.noindex.enabled === false) {
-      enabled = false;
-    }
+    var config = merge({}, defaultConfig, config.noindex || {});
 
-    if (type === 'head' && enabled) {
+    if (config.enabled && type === 'head') {
       return '<meta name="robots" content="noindex, nofollow">';
     }
+
+    return '';
   }
 };

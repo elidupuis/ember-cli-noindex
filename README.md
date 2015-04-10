@@ -5,22 +5,25 @@ Simply adds `<meta name="robots" content="noindex, nofollow">` to the `<head>` o
 You can opt-out of this per environment using the `enabled` configuration option in your *environment.js* file:
 
 ```js
-if (environment === 'production') {
+if (environment === 'beta') {
   ENV.noindex = {
     enabled: false
   }
 }
 ```
 
+By default, `enabled === true` in all environments except *production*.
+If you want the `<meta>` tag added everywhere but *production*, you don't need any configuration; just install the addon and move on.
+
 ## Installation
 
 ```bash
-ember install ember-cli-noindex
+ember install ember-cli-noindex # Ember CLI >= 0.2.3
 ```
 
 That's it!
 
-## Collaboration
+## Development
 
 * `git clone` this repository
 * `npm install`
