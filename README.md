@@ -1,6 +1,18 @@
-# ember-cli-noindex
+ember-cli-noindex
+==============================================================================
 
 Simply adds `<meta name="robots" content="noindex, nofollow">` to the `<head>` of your *index.html*.
+
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install ember-cli-noindex
+```
+
+
+Usage
+------------------------------------------------------------------------------
 
 You can opt-out of this per environment using the `enabled` configuration option in your *environment.js* file:
 
@@ -15,32 +27,37 @@ if (environment === 'beta') {
 By default, `enabled === true` in all environments except *production*.
 If you want the `<meta>` tag added everywhere but *production*, you don't need any configuration; just install the addon and move on.
 
-## Installation
 
-```bash
-ember install ember-cli-noindex # Ember CLI >= 0.2.3
-```
 
-That's it!
 
-## Development
+Contributing
+------------------------------------------------------------------------------
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+### Installation
 
-## Running
+* `git clone <repository-url>`
+* `cd ember-cli-noindex`
+* `yarn install`
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### Linting
 
-## Running Tests
+* `yarn lint:js`
+* `yarn lint:js --fix`
 
-* `ember test`
-* `ember test --server`
+### Running tests
 
-## Building
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
 
-* `ember build`
+### Running the dummy application
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
