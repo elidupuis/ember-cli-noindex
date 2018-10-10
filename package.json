@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "github:elidupuis/ember-cli-noindex",
   "license": "MIT",
   "author": "",
   "directories": {
